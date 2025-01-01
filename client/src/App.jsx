@@ -18,6 +18,7 @@ function App() {
       <>
           <div className="blog  container mx-auto ">
               <Header />
+
               {element}
           </div>
       </>

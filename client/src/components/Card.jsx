@@ -1,22 +1,22 @@
-export default function Card() {
+export default function Card(props) {
     return (
         <>
-            <div className="card flex flex-col md:flex-row items-center justify-center gap-4  md:w-5/6 p-4  mt-6 ">
-                <div className="card-image w-1/3 h-full">
+            <div className="card flex  hover:text-gray-200 hover:bg-emerald-800 shadow-md cursor-pointer transition-all duration-100 ease-in-out border-2  border-opacity-40 border-gray-300 rounded-lg opacity-95
+            text-slate-700 flex-col md:flex-row items-center justify-center gap-4   md:w-5/6 p-4  mt-6 ">
+                <div className="card-image w-64 h-52">
                     <img
-                        src="https://plus.unsplash.com/premium_photo-1734629912092-2875217f9764?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        src={props.img}
                         alt="unsplash"
                         className="w-full h-full"/>
                 </div>
                 <div
                     className="card-text w-2/3 h-full flex flex-col items-center md:items-start justify-between gap-4 p-2">
                     <div className="card-headings">
-                        <h2 className="text-lg font-md">Blog Name</h2>
-                        <h3 className="text-xs mx-4"> by user Name</h3>
+                        <h2 className="text-lg font-md">{props.title}</h2>
+                        <h3 className="text-xs mx-4"> @userName</h3>
                     </div>
                     <div className="card-content text-sm">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, dolorem eaque et facilis iste iusto laborum non praesentium
-                            repudiandae totam velit veniam veritatis voluptatum. Aliquid distinctio iusto libero nulla sequi.</p>
+                        <p>{props.content}</p>
                     </div>
                     <button className="py-2 px-4 bg-yellow-100 rounded-2xl text-sm hover:bg-yellow-300 ">expand
                     </button>
