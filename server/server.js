@@ -15,5 +15,3 @@ app.listen(3000,() =>{
     connectDB()
     console.log('Server started on port 3000')
 })
-//ankitchaturvedi0201
-//H6RjaW8o9tLfCoGg
